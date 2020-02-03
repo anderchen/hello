@@ -1,0 +1,8 @@
+<div>
+  <h2>Practice page</h2>
+  <ul>
+    <%= for {key, value} <- @var do %>
+      <li><%= key %>: <%= value %></li>
+    <% end %>
+  </ul>
+</div>  

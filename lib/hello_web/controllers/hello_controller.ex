@@ -19,7 +19,10 @@ defmodule HelloWeb.HelloController do
     render conn, "show.html", messenger: messenger
   end
 
-  # def practice(conn, _parmas) do
-  #   food = %{"pizza", "donut", "sushi", "burger", "pretzel"}
-  # end
+  def practice(conn, _params) do
+    food = %{"pizza" => 1, "donut" => 2, "sushi" => 3 , "burger" => 4, "pretzel" => 5}
+    conn
+    |> assign(:var, food)
+    |> render("practice.html")
+  end
 end
